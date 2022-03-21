@@ -8,6 +8,10 @@ const router = express.Router()
 
 router.get("/",async(req,res)=>{
     try{
+        const page = req.query.page || 1;
+        const pagesize = req.query.pagesize || 10;
+        const skip = (page-1)*pagesize;
+        
         const user = await User.find().lean().exec()
         return res.status(200).send(user)
     }
