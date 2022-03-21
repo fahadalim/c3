@@ -10,8 +10,8 @@ const commentController = require("./controller/comment.controller")
 const bookController = require("./controller/book.controller")
 
 
-// app.use("/users",userController)
-// app.use("/comment",commentController)
+app.use("/users",userController)
+app.use("/comment",commentController)
 // app.use("/books",bookController)
 
 
